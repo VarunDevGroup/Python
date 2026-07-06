@@ -1,6 +1,13 @@
 import socket
 import re
 
+
+ln='<p>Please click <a href="http://www.dr-chuck.com">here</a></p>'
+
+s=re.findall('href="(http://.*?)"',ln)
+print(s)
+
+
 mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysocket.connect(("data.pr4e.org", 80))
 
